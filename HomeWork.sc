@@ -41,6 +41,15 @@ def isPalindrome (seq: Seq[Any]) : Any = {
 isPalindrome(seq)
 Seq(5).tail
 
+def polym(array: Seq[Any]):Boolean ={
+  val last = array.length - 1
+  for(i <- 0 until array.length/2){
+      if (array(0+i) != array(last - i))
+         return false
+    }
+  true
+}
+
 //Seq(5, 5).tail == Seq(Seq(5, 5).head)
 //4) Написать функцию distinct по удалению дублей из
 //последовательности. Set и аналоги использовать нельзя
