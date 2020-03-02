@@ -24,6 +24,9 @@ def counter(array:Seq[Any]) ={
 }
 
 
+array.fold(0)((acc, _) => acc + 1)
+
+
 
 array.map(x=>x+1).sum - array.sum
 
