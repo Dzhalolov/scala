@@ -16,11 +16,16 @@ getK(firstList,5)
 
 // 2) Получить число элементов списка без
 // использования size и length
-def count(list: List[Int]) : Int =  {
-  if (list == Nil) 0
-  else 1 + count(list.tail)
+
+def counter(array:Seq[Any]) ={
+  var count = 0
+  array.foreach(_=> count+=1)
+  count
 }
-count(firstList)
+
+
+
+array.map(x=>x+1).sum - array.sum
 
 //3) Написать функцию проверки последовательности
 //на палиндромность (ex: 1 2 3 2 1)
@@ -110,7 +115,6 @@ def pairs( seq : ListBuffer[Int], seqHelp: ListBuffer[Int], k: Int, r: Int, j: I
       pairs(seq, seqHelp, k + 1, r, i)
     }
 }
-var k = 0
 pairs(ListBuffer(1, 2, 3, 4, 5), ListBuffer(1, 1), 0, 2, 0)
 
 //8) Написать функцию выводящую только простые числа из заданого диапазона(Range)
